@@ -1,0 +1,30 @@
+{
+  "name": "webpack-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/test.js",
+  "scripts": {
+    "build": "rimraf lib && webpack --config webpack.config.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "webpack",
+    "loader"
+  ],
+  "author": "WoolYang",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "rimraf": "2.5.4",
+    "webpack": "^3.8.1"
+  }
+}
