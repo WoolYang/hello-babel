@@ -21,16 +21,17 @@ const visitor = {
 				"directives",
 				t.directive(t.directiveLiteral("use strict")),
 		);
-		
-		t.variableDeclaration(
-			'const',
-			[t.variableDeclarator(
-				t.identifier("bebel"),
-				t.callExpression(
-					t.identifier("require"),
-					[t.stringLiteral("bebel-core")]
-				)
-			)]
+		path.node.body.unshift(
+			t.variableDeclaration(
+				'const',
+				[t.variableDeclarator(
+					t.identifier("bebel"),
+					t.callExpression(
+						t.identifier("require"),
+						[t.stringLiteral("bebel-core")]
+					)
+				)]
+			)
 		)
 	},
 	VariableDeclaration(path) {
