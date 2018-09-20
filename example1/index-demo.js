@@ -8,3 +8,9 @@ const result = babel.transform(code, {
        ["./babel-plugin-demo", { "openStrict": true }]
     ]
 })
+
+const test =`"use strict";
+
+var a = "babel";`
+
+console.log(result.code === test) //true
